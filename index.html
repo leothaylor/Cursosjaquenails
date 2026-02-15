@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blindagem Segura do Zero | Lista VIP Premium</title>
+  <meta name="description" content="Mini curso online direto ao ponto: blindagem do zero + passo a passo na prática + PDF de apoio. Entre na Lista VIP e receba prioridade no lançamento." />
+  <meta name="theme-color" content="#D4A373" />
+
+  <!-- Open Graph (preview de link) -->
+  <meta property="og:title" content="Blindagem Segura do Zero | Lista VIP Premium" />
+  <meta property="og:description" content="Entre na Lista VIP e receba prioridade no lançamento. Método testado na mesa, feito para iniciantes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" />
+
+  <!-- Tailwind via CDN (ok para GitHub Pages) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --nude-bg:#FAF7F2;
+      --rose-soft:#FCEEE9;
+      --champagne:#D4A373;
+      --grafite:#1A1A1A;
+      --menta-sutil:#F0F9F7;
+    }
+    body{font-family:'Inter',sans-serif;color:var(--grafite);background:#fff;}
+    h1,h2,h3,.font-title{font-family:'Montserrat',sans-serif;}
+    html{scroll-behavior:smooth;}
+
+    .bg-nude{background-color:var(--nude-bg);}
+    .bg-rose-premium{background-color:var(--rose-soft);}
+    .text-champagne{color:var(--champagne);}
+    .bg-champagne{background-color:var(--champagne);}
+    .border-champagne{border-color:var(--champagne);}
+
+    .shadow-premium{box-shadow:0 10px 30px rgba(212,163,115,.08);}
+
+    /* Cards de imagem (para NÃO quebrar layout se faltar imagem) */
+    .img-card{
+      border-radius:2rem;
+      overflow:hidden;
+      background:#E5E7EB;
+      border:1px solid rgba(255,255,255,.9);
+      box-shadow:0 10px 30px rgba(212,163,115,.08);
+      position:relative;
+    }
+    .img-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .img-fallback{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:16px;
+      color:#9CA3AF;
+      font-weight:700;
+      letter-spacing:.12em;
+      font-size:.65rem;
+      text-transform:uppercase;
+      background:#E5E7EB;
+    }
+    .img-card.loaded .img-fallback{display:none;}
+
+    .svg-icon{
+      width:26px;height:26px;
+      stroke:var(--champagne);
+      stroke-width:1.5;
+      fill:none;
+    }
+
+    /* Acessibilidade: foco visível */
+    a:focus, button:focus, summary:focus{
+      outline:2px solid rgba(212,163,115,.6);
+      outline-offset:3px;
+      border-radius:12px;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- ✅ CONFIG (links) -->
+  <!-- WhatsApp (Lista VIP): -->
+  <!-- https://api.whatsapp.com/send?phone=5521967671257&text=Olá%20Jaque,%20quero%20entrar%20na%20lista%20VIP%20para%20o%20curso%20de%20Blindagem%20Segura! -->
+  <!-- Instagram (link completo): -->
+  <!-- https://www.instagram.com/unhasporjaquelopes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw== -->
+
+  <!-- Header fixo -->
+  <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 py-4 sticky top-0 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <span class="font-title font-bold tracking-tighter text-xl uppercase italic">Blindagem Segura</span>
+        <span class="hidden md:inline-block bg-rose-premium text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest text-gray-500">
+          PRÉ-LANÇAMENTO • LISTA VIP
+        </span>
+      </div>
+
+      <a
+        href="https://api.whatsapp.com/send?phone=5521967671257&text=Olá%20Jaque,%20quero%20entrar%20na%20lista%20VIP%20para%20o%20curso%20de%20Blindagem%20Segura!"
+        target="_blank" rel="noopener"
+        class="bg-champagne text-white px-6 py-2.5 rounded-full text-[10px] font-bold hover:opacity-90 transition-all uppercase tracking-widest shadow-lg shadow-champagne/20"
+      >
+        Entrar na lista VIP
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-12 pb-24 overflow-hidden bg-nude">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+
+        <!-- Texto -->
+        <div class="lg:w-3/5 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full shadow-sm mb-8">
+            <span class="w-2 h-2 bg-green-400 animate-pulse rounded-full"></span>
+            <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400">Lista VIP Aberta • Vagas Limitadas</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-bold leading-[1.1] mb-8 text-gray-900">
+            Aprenda blindagem do zero e comece a atender com <span class="text-champagne">segurança</span>
+          </h1>
+
+          <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed font-light">
+            Mini curso online direto ao ponto, com passo a passo na prática + PDF de apoio. Feito para iniciantes e manicures que querem começar sem travar.
+          </p>
+
+          <div class="flex flex-wrap justify-center lg:justify-start gap-6 mb-12 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+            <span class="flex items-center gap-2">✨ 5 Aulas em Vídeo</span>
+            <span class="flex items-center gap-2">✨ PDF de Apoio</span>
+            <span class="flex items-center gap-2">✨ Acesso por 1 Ano</span>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+            <a
+              href="https://api.whatsapp.com/send?phone=5521967671257&text=Olá%20Jaque,%20quero%20entrar%20na%20lista%20VIP%20para%20o%20curso%20de%20Blindagem%20Segura!"
+              target="_blank" rel="noopener"
+              class="bg-gray-900 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-black transition-all shadow-2xl"
+            >
+              Quero entrar na lista VIP
+            </a>
+            <a
+              href="#conteudo"
+              class="bg-white border border-gray-200 px-12 py-5 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all text-gray-800"
+            >
+              Ver conteúdo
+            </a>
+          </div>
+        </div>
+
+        <!-- Grid de imagens (com caminhos prontos) -->
+        <div class="lg:w-2/5 grid grid-cols-2 gap-4 w-full max-w-md">
+          <!-- 1 -->
+          <div class="img-card aspect-square" data-imgcard>
+            <img src="assets/hero-close-brilho.jpg" alt="Unha com brilho e nivelamento (close)" loading="lazy" />
+            <div class="img-fallback">[assets/hero-close-brilho.jpg]</div>
+          </div>
+          <!-- 2 -->
+          <div class="img-card aspect-square" data-imgcard>
+            <img src="assets/hero-mao-chic.jpg" alt="Mão com acabamento elegante (foto chic)" loading="lazy" />
+            <div class="img-fallback">[assets/hero-mao-chic.jpg]</div>
+          </div>
+          <!-- 3 -->
+          <div class="img-card aspect-square" data-imgcard>
+            <img src="assets/hero-detalhe-cutila.jpg" alt="Detalhe de cutícula e acabamento" loading="lazy" />
+            <div class="img-fallback">[assets/hero-detalhe-cutila.jpg]</div>
+          </div>
+          <!-- 4 -->
+          <div class="img-card aspect-square" data-imgcard>
+            <img src="assets/hero-mesa-clean.jpg" alt="Mesa de trabalho clean para nail design" loading="lazy" />
+            <div class="img-fallback">[assets/hero-mesa-clean.jpg]</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-rose-soft/40 to-transparent"></div>
+  </section>
+
+  <!-- Autoridade -->
+  <section class="py-20 bg-white border-b border-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+        <div class="space-y-2">
+          <span class="block text-4xl font-bold text-champagne">6 Anos</span>
+          <p class="text-[10px] uppercase font-bold text-gray-400 tracking-[0.2em]">Experiência Real em Mesa</p>
+        </div>
+        <div class="space-y-2">
+          <span class="block text-2xl font-bold text-gray-900 leading-tight">Método testado na mesa</span>
+          <p class="text-[10px] uppercase font-bold text-gray-400 tracking-[0.2em]">Validado com alunas reais</p>
+        </div>
+        <div class="space-y-2">
+          <span class="block text-4xl font-bold text-champagne italic font-title">Prático</span>
+          <p class="text-[10px] uppercase font-bold text-gray-400 tracking-[0.2em]">Foco total em Iniciantes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destravar -->
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">O que você vai destravar</h2>
+      <p class="text-gray-400 mb-16 italic font-medium">"Você não precisa ser perfeita. Você precisa de método."</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
+            <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4 class="font-bold leading-tight text-sm text-gray-700">Segurança para fazer sem medo</h4>
+        </div>
+
+        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
+            <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9.09 9 3 3-3 3"/></svg>
+          </div>
+          <h4 class="font-bold leading-tight text-sm text-gray-700">Clareza do passo a passo real</h4>
+        </div>
+
+        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
+            <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.91 5.89L20 10l-4.59 4.11L16.5 21 12 17.27 7.5 21l1.09-6.89L4 10l6.09-1.11L12 3z"/></svg>
+          </div>
+          <h4 class="font-bold leading-tight text-sm text-gray-700">Acabamento de Alto Nível</h4>
+        </div>
+
+        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
+            <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          </div>
+          <h4 class="font-bold leading-tight text-sm text-gray-700">Fim dos erros de durabilidade</h4>
+        </div>
+
+        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
+            <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4 class="font-bold leading-tight text-sm text-gray-700">Confiança para cobrar o justo</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultados -->
+  <section class="py-24 bg-rose-soft/30">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-16">Resultados e acabamento</h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="space-y-4 text-center">
+          <div class="img-card aspect-square" data-imgcard>
+            <img src="assets/result-brilho.jpg" alt="Resultado: brilho e nivelamento" loading="lazy" />
+            <div class="img-fallback">[assets/result-brilho.jpg]</div>
+          </div>
+          <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] italic">Brilho e Nivelamento</p>
+        </div>
+
+        <div class="space-y-4 text-center">
+          <div class="img-card aspect-square" data-imgcard>
+            <img src="assets/result-cutila.jpg" alt="Resultado: cutícula e acabamento" loading="lazy" />
+            <div class="img-fallback">[assets/result-cutila.jpg]</div>
+          </div>
+          <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] italic">Cutícula e Acabamento</p>
+        </div>
+
+        <div class="space-y-4 text-center">
+          <div class="img-card aspect-square" data-imgcard>
+            <img src="assets/result-natural.jpg" alt="Resultado: natural e resistente" loading="lazy" />
+            <div class="img-fallback">[assets/result-natural.jpg]</div>
+          </div>
+          <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] italic">Natural e Resistente</p>
+        </div>
+
+        <div class="space-y-4 text-center">
+          <div class="img-card aspect-square" data-imgcard>
+            <img src="assets/result-lisa.jpg" alt="Resultado: unha lisa sem excesso" loading="lazy" />
+            <div class="img-fallback">[assets/result-lisa.jpg]</div>
+          </div>
+          <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] italic">Unha lisa sem excesso</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão escura -->
+  <section class="py-24 bg-gray-900 text-white overflow-hidden relative">
+    <div class="container mx-auto px-4 max-w-4xl relative z-10 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-16 italic font-title">Se sua blindagem descola, provavelmente é por isso:</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+        <div class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] hover:bg-white/10 transition-all">
+          <h4 class="text-xl font-bold mb-4 text-champagne">1. Preparação incompleta</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">A oleosidade é o maior vilão da aderência em iniciantes. Sem a química correta, nada segura.</p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] hover:bg-white/10 transition-all">
+          <h4 class="text-xl font-bold mb-4 text-champagne">2. Produto na pele</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">Qualquer milímetro de contato causa infiltração e levantamento precoce do material.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdo -->
+  <section id="conteudo" class="py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-16">O que você recebe ao entrar</h2>
+
+      <div class="space-y-4">
+        <div class="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
+          <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-champagne shrink-0 italic">01</div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg">Aula 1 — Base da iniciante</h4>
+            <p class="text-gray-500 text-sm">Mentalidade estratégica e erros que te travam.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
+          <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-champagne shrink-0 italic">02</div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg">Aula 2 — Preparação Correta</h4>
+            <p class="text-gray-500 text-sm">O segredo da durabilidade química e mecânica.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 p-8 rounded-[2.5rem] bg-white border-2 border-champagne shadow-xl shadow-champagne/10 text-left scale-[1.03] z-10 relative">
+          <div class="w-14 h-14 rounded-2xl bg-champagne flex items-center justify-center font-bold text-white shrink-0 italic text-xl">03</div>
+          <div class="flex-1">
+            <h4 class="font-bold text-xl text-gray-900">Aula 3 — Aplicação na Prática</h4>
+            <p class="text-gray-600 font-medium">Passo a passo completo e detalhado (Alta Definição).</p>
+          </div>
+          <span class="absolute -top-3 right-8 bg-champagne text-white text-[9px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-champagne/30">
+            Aula Principal
+          </span>
+        </div>
+
+        <div class="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
+          <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-champagne shrink-0 italic">04</div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg">Aula 4 — Acabamento Profissional</h4>
+            <p class="text-gray-500 text-sm">Lixamento técnico e selagem de alto brilho.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
+          <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-champagne shrink-0 italic">05</div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg">Aula 5 — Segurança para Atender</h4>
+            <p class="text-gray-500 text-sm">Postura profissional e transmissão de valor.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 p-8 rounded-[2.5rem] bg-menta-sutil border border-green-100 text-left">
+          <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 text-2xl">📄</div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg text-green-800">PDF — Material Complementar</h4>
+            <p class="text-green-700/60 text-sm font-medium">Checklists + Guia de Erros + Sugestão de Preços.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professora -->
+  <section class="py-24 bg-nude">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="flex flex-col md:flex-row items-center gap-20">
+
+        <div class="md:w-2/5 relative">
+          <div class="img-card w-full aspect-[4/5] rounded-[4rem] shadow-2xl relative z-10 border-4 border-white" data-imgcard style="border-radius:4rem;">
+            <img src="assets/jaque-perfil.jpg" alt="Foto da professora Jaque Lopes" loading="lazy" />
+            <div class="img-fallback">[assets/jaque-perfil.jpg]</div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-full h-full border border-champagne/30 rounded-[4rem] z-0"></div>
+        </div>
+
+        <div class="md:w-3/5">
+          <span class="text-[10px] font-bold text-champagne uppercase tracking-[0.4em] mb-4 block">Especialista Nails</span>
+          <h2 class="text-4xl font-bold mb-8 italic font-title text-gray-900 leading-tight">Olá, eu sou Jaque Lopes</h2>
+          <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+            Nail Designer há 6 anos, já ajudei diversas alunas presencialmente a dominarem a técnica que traz durabilidade e acabamento.
+            Criei este mini curso para organizar o método que me trouxe estabilidade e segurança.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 mb-12">
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-50 text-center">
+              <span class="block text-xl font-bold text-champagne mb-1">6+ Anos</span>
+              <p class="text-[8px] uppercase font-bold text-gray-400 tracking-widest">Experiência</p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-50 text-center">
+              <span class="block text-xl font-bold text-champagne mb-1">Método</span>
+              <p class="text-[8px] uppercase font-bold text-gray-400 tracking-widest">Validado</p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-50 text-center">
+              <span class="block text-xl font-bold text-champagne mb-1">Foco</span>
+              <p class="text-[8px] uppercase font-bold text-gray-400 tracking-widest">Iniciante</p>
+            </div>
+          </div>
+
+          <a
+            href="https://api.whatsapp.com/send?phone=5521967671257&text=Olá%20Jaque,%20quero%20entrar%20na%20lista%20VIP%20para%20o%20curso%20de%20Blindagem%20Segura!"
+            target="_blank" rel="noopener"
+            class="text-champagne font-bold flex items-center gap-3 hover:gap-5 transition-all group underline decoration-champagne/30 underline-offset-8"
+          >
+            <span>Entrar na Lista VIP no WhatsApp</span>
+            <span class="text-xl">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24 bg-white border-t border-gray-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-3xl font-bold text-center mb-16 text-gray-900">Dúvidas comuns</h2>
+
+      <div class="space-y-4">
+        <details class="group bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 transition-all">
+          <summary class="flex items-center justify-between p-7 cursor-pointer list-none font-bold text-gray-800">
+            Consigo aprender mesmo sendo iniciante?
+            <span class="transition-transform group-open:rotate-180 text-champagne">▼</span>
+          </summary>
+          <div class="px-7 pb-7 text-gray-500 text-sm leading-relaxed">
+            Sim. O curso foi desenhado do absoluto zero para quem tem medo ou não sabe por onde começar. O método é direto ao ponto.
+          </div>
+        </details>
+
+        <details class="group bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 transition-all">
+          <summary class="flex items-center justify-between p-7 cursor-pointer list-none font-bold text-gray-800">
+            O curso tem certificado?
+            <span class="transition-transform group-open:rotate-180 text-champagne">▼</span>
+          </summary>
+          <div class="px-7 pb-7 text-gray-500 text-sm leading-relaxed">
+            Sim. Ao finalizar todas as aulas, você recebe seu certificado digital de participação diretamente na plataforma.
+          </div>
+        </details>
+
+        <details class="group bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 transition-all">
+          <summary class="flex items-center justify-between p-7 cursor-pointer list-none font-bold text-gray-800">
+            Por quanto tempo terei acesso?
+            <span class="transition-transform group-open:rotate-180 text-champagne">▼</span>
+          </summary>
+          <div class="px-7 pb-7 text-gray-500 text-sm leading-relaxed">
+            Você terá acesso garantido por 1 ano para assistir quantas vezes quiser.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oferta final (Lista VIP) -->
+  <section id="oferta" class="py-24 bg-nude">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="bg-gray-900 rounded-[4rem] p-12 md:p-24 text-center shadow-2xl relative overflow-hidden">
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Domine a blindagem agora</h2>
+          <p class="text-champagne font-bold text-xl mb-12">O preço de lançamento será liberado primeiro para a Lista VIP.</p>
+
+          <div class="bg-white/5 border border-white/10 rounded-[2.5rem] p-12 mb-14 max-w-lg mx-auto">
+            <ul class="text-white/80 text-sm space-y-5 text-left font-medium">
+              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Receba o link da turma antes de todo mundo</li>
+              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Garanta o valor especial exclusivo de 1ª turma</li>
+              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Suporte direto comigo via WhatsApp</li>
+            </ul>
+          </div>
+
+          <a
+            href="https://api.whatsapp.com/send?phone=5521967671257&text=Olá%20Jaque,%20quero%20entrar%20na%20lista%20VIP%20para%20o%20curso%20de%20Blindagem%20Segura!"
+            target="_blank" rel="noopener"
+            class="inline-block w-full md:w-auto bg-champagne text-white px-20 py-7 rounded-2xl font-bold text-xl uppercase shadow-2xl shadow-champagne/20 hover:scale-105 transition-all"
+          >
+            Quero garantir minha vaga na lista VIP
+          </a>
+
+          <p class="text-white/20 mt-12 text-[9px] uppercase tracking-[0.4em] font-bold">Abertura prioritária somente via WhatsApp</p>
+        </div>
+
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-champagne/10 blur-[100px] rounded-full"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-20 text-center bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col items-center gap-12">
+        <div class="flex justify-center gap-12">
+          <a
+            href="https://www.instagram.com/unhasporjaquelopes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank" rel="noopener"
+            class="text-gray-400 hover:text-champagne font-bold text-[10px] uppercase tracking-[0.3em] transition-colors"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=5521967671257"
+            target="_blank" rel="noopener"
+            class="text-gray-400 hover:text-champagne font-bold text-[10px] uppercase tracking-[0.3em] transition-colors"
+          >
+            Suporte WhatsApp
+          </a>
+        </div>
+
+        <div class="space-y-4">
+          <p class="text-gray-300 text-[9px] uppercase tracking-[0.2em] font-bold">© Jaqueline Lopes — Todos os direitos reservados.</p>
+          <p class="text-gray-200 text-[8px] uppercase tracking-[0.1em] italic">Pré-lançamento • Estratégia Lista VIP</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script: esconde fallback quando imagem carrega (evita “quebra”) -->
+  <script>
+    (function () {
+      const cards = document.querySelectorAll('[data-imgcard]');
+      cards.forEach(card => {
+        const img = card.querySelector('img');
+        if (!img) return;
+
+        const markLoaded = () => card.classList.add('loaded');
+
+        if (img.complete && img.naturalWidth > 0) {
+          markLoaded();
+        } else {
+          img.addEventListener('load', markLoaded, { once: true });
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
