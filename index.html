@@ -89,6 +89,40 @@
       outline-offset:3px;
       border-radius:12px;
     }
+
+    /* ✅ Efeito “lupa” nas fotos (hover + touch) */
+    .img-card img{
+      transition: transform .35s ease, filter .35s ease;
+      transform: scale(1);
+    }
+    .img-card:hover img{
+      transform: scale(1.07);
+      filter: saturate(1.05) contrast(1.02);
+    }
+    .img-card:active img{
+      transform: scale(1.06);
+    }
+    .img-card:focus-within img{
+      transform: scale(1.06);
+    }
+
+    /* ✅ Glow premium nos cards (bordas “acesas”) */
+    .glow-card{
+      transition: box-shadow .25s ease, border-color .25s ease, transform .25s ease;
+    }
+    .glow-card:hover{
+      border-color: rgba(212,163,115,.55);
+      box-shadow:
+        0 0 0 2px rgba(212,163,115,.18),
+        0 14px 40px rgba(212,163,115,.12);
+      transform: translateY(-2px);
+    }
+    .glow-card:active{
+      border-color: rgba(212,163,115,.50);
+      box-shadow:
+        0 0 0 2px rgba(212,163,115,.16),
+        0 10px 30px rgba(212,163,115,.10);
+    }
   </style>
 </head>
 
@@ -129,7 +163,7 @@
         <div class="lg:w-3/5 text-center lg:text-left">
           <div class="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full shadow-sm mb-8">
             <span class="w-2 h-2 bg-green-400 animate-pulse rounded-full"></span>
-            <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400">Lista VIP Aberta • Vagas Limitadas</span>
+            <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-gray-400">Lista VIP Aberta • Prioridade no lançamento</span>
           </div>
 
           <h1 class="text-4xl md:text-6xl font-bold leading-[1.1] mb-8 text-gray-900">
@@ -143,7 +177,7 @@
           <div class="flex flex-wrap justify-center lg:justify-start gap-6 mb-12 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
             <span class="flex items-center gap-2">✨ 5 Aulas em Vídeo</span>
             <span class="flex items-center gap-2">✨ PDF de Apoio</span>
-            <span class="flex items-center gap-2">✨ Acesso por 1 Ano</span>
+            <span class="flex items-center gap-2">✨ Liberação no lançamento</span>
           </div>
 
           <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
@@ -152,7 +186,7 @@
               target="_blank" rel="noopener"
               class="bg-gray-900 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-black transition-all shadow-2xl"
             >
-              Quero entrar na lista VIP
+              Quero o valor de lançamento no WhatsApp
             </a>
             <a
               href="#conteudo"
@@ -220,35 +254,35 @@
       <p class="text-gray-400 mb-16 italic font-medium">"Você não precisa ser perfeita. Você precisa de método."</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+        <div class="glow-card p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
           <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
             <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h4 class="font-bold leading-tight text-sm text-gray-700">Segurança para fazer sem medo</h4>
         </div>
 
-        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+        <div class="glow-card p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
           <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
             <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9.09 9 3 3-3 3"/></svg>
           </div>
           <h4 class="font-bold leading-tight text-sm text-gray-700">Clareza do passo a passo real</h4>
         </div>
 
-        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+        <div class="glow-card p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
           <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
             <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.91 5.89L20 10l-4.59 4.11L16.5 21 12 17.27 7.5 21l1.09-6.89L4 10l6.09-1.11L12 3z"/></svg>
           </div>
           <h4 class="font-bold leading-tight text-sm text-gray-700">Acabamento de Alto Nível</h4>
         </div>
 
-        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+        <div class="glow-card p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
           <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
             <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
           </div>
           <h4 class="font-bold leading-tight text-sm text-gray-700">Fim dos erros de durabilidade</h4>
         </div>
 
-        <div class="p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
+        <div class="glow-card p-8 rounded-[3rem] border border-gray-100 bg-gray-50/50 hover:bg-rose-soft/20 transition-all group shadow-sm">
           <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm mx-auto group-hover:scale-110 transition-transform">
             <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
@@ -305,12 +339,12 @@
       <h2 class="text-3xl md:text-4xl font-bold mb-16 italic font-title">Se sua blindagem descola, provavelmente é por isso:</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-        <div class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] hover:bg-white/10 transition-all">
+        <div class="glow-card bg-white/5 border border-white/10 p-10 rounded-[2.5rem] hover:bg-white/10 transition-all">
           <h4 class="text-xl font-bold mb-4 text-champagne">1. Preparação incompleta</h4>
           <p class="text-gray-400 text-sm leading-relaxed">A oleosidade é o maior vilão da aderência em iniciantes. Sem a química correta, nada segura.</p>
         </div>
 
-        <div class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] hover:bg-white/10 transition-all">
+        <div class="glow-card bg-white/5 border border-white/10 p-10 rounded-[2.5rem] hover:bg-white/10 transition-all">
           <h4 class="text-xl font-bold mb-4 text-champagne">2. Produto na pele</h4>
           <p class="text-gray-400 text-sm leading-relaxed">Qualquer milímetro de contato causa infiltração e levantamento precoce do material.</p>
         </div>
@@ -324,7 +358,7 @@
       <h2 class="text-3xl md:text-4xl font-bold mb-16">O que você recebe ao entrar</h2>
 
       <div class="space-y-4">
-        <div class="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
+        <div class="glow-card flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
           <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-champagne shrink-0 italic">01</div>
           <div class="flex-1">
             <h4 class="font-bold text-lg">Aula 1 — Base da iniciante</h4>
@@ -332,7 +366,7 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
+        <div class="glow-card flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
           <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-champagne shrink-0 italic">02</div>
           <div class="flex-1">
             <h4 class="font-bold text-lg">Aula 2 — Preparação Correta</h4>
@@ -340,18 +374,18 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-6 p-8 rounded-[2.5rem] bg-white border-2 border-champagne shadow-xl shadow-champagne/10 text-left scale-[1.03] z-10 relative">
+        <div class="glow-card flex items-center gap-6 p-8 rounded-[2.5rem] bg-white border-2 border-champagne shadow-xl shadow-champagne/10 text-left scale-[1.03] z-10 relative">
           <div class="w-14 h-14 rounded-2xl bg-champagne flex items-center justify-center font-bold text-white shrink-0 italic text-xl">03</div>
           <div class="flex-1">
             <h4 class="font-bold text-xl text-gray-900">Aula 3 — Aplicação na Prática</h4>
-            <p class="text-gray-600 font-medium">Passo a passo completo e detalhado (Alta Definição).</p>
+            <p class="text-gray-600 font-medium">Passo a passo completo e detalhado (visão de mesa).</p>
           </div>
           <span class="absolute -top-3 right-8 bg-champagne text-white text-[9px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-champagne/30">
             Aula Principal
           </span>
         </div>
 
-        <div class="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
+        <div class="glow-card flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
           <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-champagne shrink-0 italic">04</div>
           <div class="flex-1">
             <h4 class="font-bold text-lg">Aula 4 — Acabamento Profissional</h4>
@@ -359,7 +393,7 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
+        <div class="glow-card flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 text-left">
           <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-champagne shrink-0 italic">05</div>
           <div class="flex-1">
             <h4 class="font-bold text-lg">Aula 5 — Segurança para Atender</h4>
@@ -367,11 +401,11 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-6 p-8 rounded-[2.5rem] bg-menta-sutil border border-green-100 text-left">
+        <div class="glow-card flex items-center gap-6 p-8 rounded-[2.5rem] bg-menta-sutil border border-green-100 text-left">
           <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 text-2xl">📄</div>
           <div class="flex-1">
             <h4 class="font-bold text-lg text-green-800">PDF — Material Complementar</h4>
-            <p class="text-green-700/60 text-sm font-medium">Checklists + Guia de Erros + Sugestão de Preços.</p>
+            <p class="text-green-700/60 text-sm font-medium">Checklists + Guia de Erros + Guia de Precificação Inicial.</p>
           </div>
         </div>
       </div>
@@ -446,11 +480,11 @@
 
         <details class="group bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 transition-all">
           <summary class="flex items-center justify-between p-7 cursor-pointer list-none font-bold text-gray-800">
-            O curso tem certificado?
+            Como vou receber o acesso?
             <span class="transition-transform group-open:rotate-180 text-champagne">▼</span>
           </summary>
           <div class="px-7 pb-7 text-gray-500 text-sm leading-relaxed">
-            Sim. Ao finalizar todas as aulas, você recebe seu certificado digital de participação diretamente na plataforma.
+            Ao entrar na Lista VIP, você recebe o link de acesso assim que o mini curso for liberado. Toda a comunicação e orientação é feita pelo WhatsApp.
           </div>
         </details>
 
@@ -460,7 +494,7 @@
             <span class="transition-transform group-open:rotate-180 text-champagne">▼</span>
           </summary>
           <div class="px-7 pb-7 text-gray-500 text-sm leading-relaxed">
-            Você terá acesso garantido por 1 ano para assistir quantas vezes quiser.
+            O período de acesso será informado na liberação do mini curso. A Lista VIP recebe essa informação primeiro, junto com o valor de lançamento.
           </div>
         </details>
       </div>
@@ -472,14 +506,14 @@
     <div class="container mx-auto px-4 max-w-4xl">
       <div class="bg-gray-900 rounded-[4rem] p-12 md:p-24 text-center shadow-2xl relative overflow-hidden">
         <div class="relative z-10">
-          <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Domine a blindagem agora</h2>
-          <p class="text-champagne font-bold text-xl mb-12">O preço de lançamento será liberado primeiro para a Lista VIP.</p>
+          <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Faça sua primeira blindagem com segurança</h2>
+          <p class="text-champagne font-bold text-xl mb-12">O valor de lançamento será liberado primeiro para a Lista VIP.</p>
 
           <div class="bg-white/5 border border-white/10 rounded-[2.5rem] p-12 mb-14 max-w-lg mx-auto">
             <ul class="text-white/80 text-sm space-y-5 text-left font-medium">
-              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Receba o link da turma antes de todo mundo</li>
-              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Garanta o valor especial exclusivo de 1ª turma</li>
-              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Suporte direto comigo via WhatsApp</li>
+              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Receba o link de acesso antes de todo mundo</li>
+              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Garanta o valor especial de lançamento (Lista VIP)</li>
+              <li class="flex items-start gap-4"><span class="text-champagne font-bold">✓</span>Orientações e avisos pelo WhatsApp (Lista VIP)</li>
             </ul>
           </div>
 
@@ -488,10 +522,10 @@
             target="_blank" rel="noopener"
             class="inline-block w-full md:w-auto bg-champagne text-white px-20 py-7 rounded-2xl font-bold text-xl uppercase shadow-2xl shadow-champagne/20 hover:scale-105 transition-all"
           >
-            Quero garantir minha vaga na lista VIP
+            Quero garantir meu valor de lançamento
           </a>
 
-          <p class="text-white/20 mt-12 text-[9px] uppercase tracking-[0.4em] font-bold">Abertura prioritária somente via WhatsApp</p>
+          <p class="text-white/20 mt-12 text-[9px] uppercase tracking-[0.4em] font-bold">Liberação prioritária somente via WhatsApp</p>
         </div>
 
         <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-champagne/10 blur-[100px] rounded-full"></div>
